@@ -25,11 +25,11 @@
       </form>
       <ul class="list-group">
         <li ng-repeat="item in todoCtrl.tasks">
-          <input type="checkbox" ng-model="item.done"/>
+          <input class="checkDone" type="checkbox" ng-model="item.done"/>
           <span ng-class="{'done':item.done}">{{item.todo}}</span>
         </li>
       </ul>
-      <button ng-click="todoCtrl.clearCompleted()">Clear Completed</button>
+      <button class="clearBtn" ng-click="todoCtrl.clearCompleted()">Clear Completed</button>
     </div>
   </body>
 </html>

@@ -1,13 +1,13 @@
 todoList.controller('todoListController', [function() {
   var self = this;
-  self.tasks = []
+  self.tasks = [];
   self.addTask = function() {
-    self.tasks.push({'todo':self.taskInput,'done':false})
-    self.taskInput=""
+    self.tasks.push({'todo':self.taskInput,'done':false});
+    self.taskInput="";
   };
   self.clearCompleted = function() {
     self.tasks = self.tasks.filter(function(item){
-      return !item.done
+      return !item.done;
     })
   }
 }]);
