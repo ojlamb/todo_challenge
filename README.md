@@ -27,6 +27,10 @@ So that I have more time to think about other things
 As a person who actually gets stuff done
 I want to mark my tasks as done
 So that I don't do them twice
+
+As someone who has done lots of stuff
+I want to be able to clear my completed tasks
+So I never see them again
 ```
 
 ##Technology used
