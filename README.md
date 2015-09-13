@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ojlamb/todo_challenge.svg?branch=master)](https://travis-ci.org/ojlamb/todo_challenge)
+
 # Todo Challenge
 
 * Deadline: submit completed pull request by 9am on Monday
