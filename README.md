@@ -1,19 +1,19 @@
 [![Build Status](https://travis-ci.org/ojlamb/todo_challenge.svg?branch=master)](https://travis-ci.org/ojlamb/todo_challenge)
 
 # Todo Challenge - AngularJS
-
 The purpose of this challenge was to learn the basics of test driven/behavior driven development using Angular JS.
 
 ##Getting started
 
-```git clone http://github.com/ojlamb/todo-challenge
+```bash
+git clone http://github.com/ojlamb/todo-challenge
 cd todo-challenge
 npm install
 bower install
 open index.html
 ```
 
-##User stories:
+##User stories
 
 ```
 As a forgetful person
@@ -30,12 +30,14 @@ So that I don't do them twice
 ```
 
 ##Technology used
+
 * AngularJS
 * Karma - Unit testing
 * Protractor - End to End feature testing
 
 ##V2 Work to be done
+
 * Build a counter for number of tasks
 * Add filter feature to query all, active and completed tasks
 * Develop functionality to edit tasks
-* Add styling. 
+* Add styling
