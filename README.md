@@ -7,7 +7,7 @@ The purpose of this challenge was to learn the basics of test driven/behavior dr
 
 ```bash
 git clone http://github.com/ojlamb/todo-challenge
-cd todo-challenge
+cd todo_challenge
 npm install
 bower install
 open index.html
