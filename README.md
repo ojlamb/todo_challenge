@@ -12,6 +12,19 @@ npm install
 bower install
 open index.html
 ```
+##Running tests
+```
+webdriver-manager start
+```
+Open new terminal tab
+```
+http-server
+```
+Open new terminal tab
+```
+protractor test/e2e/conf.js
+karma start test/karma.conf.js
+```
 
 ##User stories
 

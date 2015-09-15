@@ -22,8 +22,9 @@ describe('todoListController', function() {
   });
 
   it('can clear completed tasks', function() {
-    ctrl.tasks[0] = { 'todo' : "Take out the garbage", done :true }
+    ctrl.tasks = [{ 'todo' : "Take out the garbage", 'done' :true },{ 'todo' :
+    "Take out the garbage", 'done' :false }]
     ctrl.clearCompleted();
-    expect(ctrl.tasks[0]).toBeUndefined();
+    expect(ctrl.tasks).toEqual([{ 'todo' : "Take out the garbage", 'done' :false }])
   });
 });
