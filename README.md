@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ojlamb/todo_challenge.svg?branch=master)](https://travis-ci.org/ojlamb/todo_challenge)[![Code Climate](https://codeclimate.com/github/ojlamb/todo_challenge/badges/gpa.svg)](https://codeclimate.com/github/ojlamb/todo_challenge)
+[![Build Status](https://travis-ci.org/ojlamb/todo_challenge.svg?branch=master)](https://travis-ci.org/ojlamb/todo_challenge)  [![Code Climate](https://codeclimate.com/github/ojlamb/todo_challenge/badges/gpa.svg)](https://codeclimate.com/github/ojlamb/todo_challenge)
 
 # Todo Challenge - AngularJS
 The purpose of this challenge was to learn the basics of test driven/behavior driven development using Angular JS.
