@@ -27,7 +27,7 @@ describe('todoList', function() {
      expect(element.all(by.binding('item.todo')).getText()).toNotContain('Walk the dog');
    });
 
-   it('filters completed tasks', function(){
+   it('filters active tasks', function(){
      element(by.model('todoCtrl.taskInput')).sendKeys('Walk the dog');
      element(by.className('btn')).click();
      element(by.className('checkDone')).click();
@@ -35,7 +35,7 @@ describe('todoList', function() {
      expect(element.all(by.binding('item.todo')).getText()).toNotContain('Walk the dog');
    });
 
-   it('shows tasks still active', function(){
+   it('it filters active from completed tasks', function(){
      element(by.model('todoCtrl.taskInput')).sendKeys('Walk the dog');
      element(by.className('btn')).click();
      element(by.className('checkDone')).click();
@@ -46,7 +46,7 @@ describe('todoList', function() {
      expect(element(by.binding('item.todo')).getText()).toEqual('Wash the car');
    });
 
-   it('shows tasks completed', function(){
+   it('filters completed tasks from active', function(){
      element(by.model('todoCtrl.taskInput')).sendKeys('Walk the dog');
      element(by.className('btn')).click();
      element(by.className('checkDone')).click();
