@@ -25,5 +25,36 @@ describe('todoList', function() {
      element(by.className('checkDone')).click();
      element(by.className('clearBtn')).click();
      expect(element.all(by.binding('item.todo')).getText()).toNotContain('Walk the dog');
-   })
+   });
+
+   it('filters completed tasks', function(){
+     element(by.model('todoCtrl.taskInput')).sendKeys('Walk the dog');
+     element(by.className('btn')).click();
+     element(by.className('checkDone')).click();
+     element(by.className('filter-active')).click();
+     expect(element.all(by.binding('item.todo')).getText()).toNotContain('Walk the dog');
+   });
+
+   it('shows tasks still active', function(){
+     element(by.model('todoCtrl.taskInput')).sendKeys('Walk the dog');
+     element(by.className('btn')).click();
+     element(by.className('checkDone')).click();
+     element(by.model('todoCtrl.taskInput')).sendKeys('Wash the car');
+     element(by.className('btn')).click();
+     element(by.className('filter-active')).click();
+     expect(element.all(by.binding('item.todo')).getText()).toNotContain('Walk the dog');
+     expect(element(by.binding('item.todo')).getText()).toEqual('Wash the car');
+   });
+
+   it('shows tasks completed', function(){
+     element(by.model('todoCtrl.taskInput')).sendKeys('Walk the dog');
+     element(by.className('btn')).click();
+     element(by.className('checkDone')).click();
+     element(by.model('todoCtrl.taskInput')).sendKeys('Wash the car');
+     element(by.className('btn')).click();
+     element(by.className('filter-complete')).click();
+     expect(element.all(by.binding('item.todo')).getText()).toNotContain('Wash the car');
+     expect(element(by.binding('item.todo')).getText()).toEqual('Walk the dog');
+   });
+
 });

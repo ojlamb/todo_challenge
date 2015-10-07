@@ -23,13 +23,17 @@
         <input type="text" ng-model="todoCtrl.taskInput" required>
         <button class="btn" ng-disabled="todoFrm.$invalid"> Add Task</button>
       </form>
+      <p class="current-filter">{{todoCtrl.filter}} Tasks</p>
       <ul class="list-group">
-        <li ng-repeat="item in todoCtrl.tasks">
+        <li ng-repeat="item in todoCtrl.tasks | filter: todoCtrl.listFilter">
           <input class="checkDone" type="checkbox" ng-model="item.done"/>
           <span ng-class="{'done':item.done}">{{item.todo}}</span>
         </li>
       </ul>
-      <button class="clearBtn" ng-click="todoCtrl.clearCompleted()">Clear Completed</button>
+      <button class="btn filter-all" ng-click="todoCtrl.listFilter = {}; todoCtrl.filter = 'All'">All</button>
+      <button class="btn filter-active" ng-click="todoCtrl.listFilter = { done: false}; todoCtrl.filter = 'Active'">Active</button>
+      <button class="btn filter-complete" ng-click="todoCtrl.listFilter = { done: true}; todoCtrl.filter = 'Completed'">Complete</button>
+      <button class="btn clearBtn" ng-click="todoCtrl.clearCompleted()">Clear Completed</button>
     </div>
   </body>
 </html>
