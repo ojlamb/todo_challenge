@@ -41,9 +41,14 @@ As a person who actually gets stuff done
 I want to mark my tasks as done
 So that I don't do them twice
 
+As a person with a lot of tasks
+I want to be able to filter my tasks by "All", "Active", "Complete"
+So that I only see the relevant tasks
+
 As someone who has done lots of stuff
 I want to be able to clear my completed tasks
 So I never see them again
+
 ```
 
 ##Technology used
@@ -55,6 +60,5 @@ So I never see them again
 ##V2 Work to be done
 
 * Build a counter for number of tasks
-* Add filter feature to query all, active and completed tasks
 * Develop functionality to edit tasks
 * Add styling
