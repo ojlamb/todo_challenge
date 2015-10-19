@@ -1,0 +1,54 @@
+html, body { margin: 0; padding: 0; }
+.todoContainer {
+  color: #0C0A3E;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.todoContainer h1{
+  text-align: center;
+  margin-top:0;
+  padding-top: 5px;
+  height: 50px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  background-color: #0C0A3E;
+  color: #EAEAEA;
+}
+.formBox{
+  float:right;
+  padding-top: 5px;
+  margin-right: 5%;
+}
+
+.current-filter{
+  top:50px;
+  margin-top: 0px;
+  height: 50px;
+  font-size: 36px;
+  color: #EAEAEA;
+  background-color: #D11149;
+}
+
+.buttonList{
+
+}
+
+.buttonList li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 5px;
+}
+
+.done{
+  text-decoration: line-through;
+  color: #707070;
+}
+
+.btn{
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: #1A8FE3;
+  background-color:#EAEAEA;
+
+}

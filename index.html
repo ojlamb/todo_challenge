@@ -4,25 +4,23 @@
     <meta charset="utf-8">
     <title>To-Do List</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="js/app.js"></script>
     <script src="js/todoListController.js"></script>
-    <style>
-    .done{
-      text-decoration: line-through;
-      color: #707070;
-    }
-    </style>
   </head>
 
   <body ng-controller="todoListController as todoCtrl">
-    <div>
-      <form name="todoFrm" class="form-horizontal" ng-submit="todoCtrl.addTask()">
-        <input type="text" ng-model="todoCtrl.taskInput" required>
-        <button class="btn" ng-disabled="todoFrm.$invalid"> Add Task</button>
-      </form>
+    <div class="todoContainer">
+      <h1>Todo-List</h1>
+      <div class="formBox">
+        <form name="todoFrm" class="form-horizontal" ng-submit="todoCtrl.addTask()">
+          <input type="text" class="textbox" ng-model="todoCtrl.taskInput" required>
+          <button class="btn" ng-disabled="todoFrm.$invalid"> Add Task</button>
+        </form>
+      </div>
       <p class="current-filter">{{todoCtrl.filter}} Tasks</p>
       <ul class="list-group">
         <li ng-repeat="item in todoCtrl.tasks | filter: todoCtrl.listFilter">
@@ -30,10 +28,14 @@
           <span ng-class="{'done':item.done}">{{item.todo}}</span>
         </li>
       </ul>
-      <button class="btn filter-all" ng-click="todoCtrl.listFilter = {}; todoCtrl.filter = 'All'">All</button>
-      <button class="btn filter-active" ng-click="todoCtrl.listFilter = { done: false}; todoCtrl.filter = 'Active'">Active</button>
-      <button class="btn filter-complete" ng-click="todoCtrl.listFilter = { done: true}; todoCtrl.filter = 'Completed'">Complete</button>
-      <button class="btn clearBtn" ng-click="todoCtrl.clearCompleted()">Clear Completed</button>
+      <div class="buttonHolder">
+        <ul class="buttonList">
+          <li><button class="btn filter-all" ng-click="todoCtrl.listFilter = {}; todoCtrl.filter = 'All'">All</button></li>
+          <li><button class="btn filter-active" ng-click="todoCtrl.listFilter = { done: false}; todoCtrl.filter = 'Active'">Active</button></li>
+          <li><button class="btn filter-complete" ng-click="todoCtrl.listFilter = { done: true}; todoCtrl.filter = 'Completed'">Complete</button></li>
+          <li><button class="btn clearBtn" ng-click="todoCtrl.clearCompleted()">Clear Completed</button></li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>

@@ -1,7 +1,7 @@
 {
   "name": "todo-challenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![Build Status](https://travis-ci.org/ojlamb/todo_challenge.svg?branch=master)](https://travis-ci.org/ojlamb/todo_challenge)  [![Code Climate](https://codeclimate.com/github/ojlamb/todo_challenge/badges/gpa.svg)](https://codeclimate.com/github/ojlamb/todo_challenge)",
   "main": "index.js",
   "scripts": {
     "test --single-run": "node node_modules/karma/bin/karma start test/karma.conf.js  --single-run"
@@ -11,11 +11,33 @@
   "devDependencies": {
     "bower": "^1.5.2",
     "jasmine-core": "^2.3.4",
-    "karma": "^0.13.9",
-    "karma-chrome-launcher": "^0.2.0",
+    "karma": "^0.13.10",
+    "karma-chrome-launcher": "^0.2.1",
     "karma-jasmine": "^0.3.6",
     "karma-phantomjs-launcher": "^0.2.1",
     "phantomjs": "^1.9.18",
-    "protractor": "^2.2.0"
-  }
+    "protractor": "^2.5.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "karma": "^0.13.9",
+    "karma-chrome-launcher": "^0.2.0",
+    "bower": "^1.5.2",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "protractor": "^2.2.0",
+    "jasmine-core": "^2.3.4",
+    "karma-jasmine": "^0.3.6",
+    "test": "^0.6.0",
+    "phantomjs": "^1.9.18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ojlamb/todo_challenge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ojlamb/todo_challenge/issues"
+  },
+  "homepage": "https://github.com/ojlamb/todo_challenge#readme"
 }
