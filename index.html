@@ -14,27 +14,39 @@
 
   <body ng-controller="todoListController as todoCtrl">
     <div class="todoContainer">
-      <h1>Todo-List</h1>
-      <div class="formBox">
-        <form name="todoFrm" class="form-horizontal" ng-submit="todoCtrl.addTask()">
-          <input type="text" class="textbox" ng-model="todoCtrl.taskInput" required>
-          <button class="btn" ng-disabled="todoFrm.$invalid"> Add Task</button>
-        </form>
-      </div>
-      <p class="current-filter">{{todoCtrl.filter}} Tasks</p>
-      <ul class="list-group">
-        <li ng-repeat="item in todoCtrl.tasks | filter: todoCtrl.listFilter">
-          <input class="checkDone" type="checkbox" ng-model="item.done"/>
-          <span ng-class="{'done':item.done}">{{item.todo}}</span>
-        </li>
-      </ul>
-      <div class="buttonHolder">
-        <ul class="buttonList">
-          <li><button class="btn filter-all" ng-click="todoCtrl.listFilter = {}; todoCtrl.filter = 'All'">All</button></li>
-          <li><button class="btn filter-active" ng-click="todoCtrl.listFilter = { done: false}; todoCtrl.filter = 'Active'">Active</button></li>
-          <li><button class="btn filter-complete" ng-click="todoCtrl.listFilter = { done: true}; todoCtrl.filter = 'Completed'">Complete</button></li>
-          <li><button class="btn clearBtn" ng-click="todoCtrl.clearCompleted()">Clear Completed</button></li>
-        </ul>
+      <div class="container-fluid">
+        <div class="row">
+          <h1>Todo-List</h1>
+        </div>
+        <div class="row">
+          <div class="col-md-4 current-filter">
+            <p>{{todoCtrl.filter}} Tasks</p>
+          </div>
+          <div class="col-md-4 formBox">
+            <form name="todoFrm" class="form-horizontal" ng-submit="todoCtrl.addTask()">
+              <input type="text" class="textbox" ng-model="todoCtrl.taskInput" required>
+              <button class="btn" ng-disabled="todoFrm.$invalid"> Add Task</button>
+            </form>
+          </div>
+          <div class="col-md-4 buttonList">
+            <ul>
+              <li><button class="btn filter-all" ng-click="todoCtrl.listFilter = {}; todoCtrl.filter = 'All'">All</button></li>
+              <li><button class="btn filter-active" ng-click="todoCtrl.listFilter = { done: false}; todoCtrl.filter = 'Active'">Active</button></li>
+              <li><button class="btn filter-complete" ng-click="todoCtrl.listFilter = { done: true}; todoCtrl.filter = 'Completed'">Complete</button></li>
+              <li><button class="btn clearBtn" ng-click="todoCtrl.clearCompleted()">Clear Completed</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class= "col-md-6 col-md-offset-2">
+            <ul class="list-group">
+              <li ng-repeat="item in todoCtrl.tasks | filter: todoCtrl.listFilter" class="todoItem">
+                <input class="checkDone" type="checkbox" ng-model="item.done"/>
+                <span ng-class="{'done':item.done}">{{item.todo}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </body>
